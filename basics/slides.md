@@ -140,6 +140,12 @@ simplest type in StatsD and collectd
 <center>
 <img src="luke_skywalker.jpg"></img>
 </center>
+<br />
+<center style="font-size:2em;">
+You shoud monitor your production apps<br />
+from the inside<br />
+Srsly
+</center>
 
 !SLIDE
 # Metrics library from Coda Hale
@@ -148,6 +154,21 @@ simplest type in StatsD and collectd
 
 !SLIDE 
 # Metrics in Action
+
+* virtually no overhead
+* ideal for capturing key performance indicators (kpis)
+
+
+<br />
+
+    private final Meter registrations =
+       Metrics.newMeter(RequestHandler.class, 
+       "registrations", "registrations", TimeUnit.SECONDS);
+
+    public void handleUserRegistrations(Request request, Response response) {
+       registrations.mark();
+       // etc
+    }
 
 
 !SLIDE

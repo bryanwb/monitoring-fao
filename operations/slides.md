@@ -219,10 +219,12 @@ Keep your logs, ideally in elasticsearch and view them with kibana
 
 
 !SLIDE
-# The Power of Chef
+# The Power of Chef + Ruby
 
 * I couldn't have put together this stack w/out Chef to automate the
   installation of monitoring daemons
+* Majority of "DevOps" tools are written in Ruby
+* FAO sysadmins use Ruby for scripting
 
 ![chef](oc-chef-logo.png)
 
