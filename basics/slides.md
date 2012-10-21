@@ -155,11 +155,12 @@ Srsly
 !SLIDE 
 # Metrics in Action
 
-* virtually no overhead
+* Virtually no overhead
+* Should be used in production
 * ideal for capturing key performance indicators (kpis)
 
 
-<br />
+<Br />
 
     private final Meter registrations =
        Metrics.newMeter(RequestHandler.class, 
@@ -169,6 +170,25 @@ Srsly
        registrations.mark();
        // etc
     }
+
+!SLIDE
+# Monitoring arbitrary systems with Collectd
+
+* All you need is a shell script
+
+    HOSTNAME="${COLLECTD_HOSTNAME:-localhost}"
+    INTERVAL="${COLLECTD_INTERVAL:-60}"
+ 
+    while sleep "$INTERVAL"; do
+      PID=$(ps -ef | grep 'tomcat' | cut -f1)
+      NOFILES=$(echo /proc/$PID/nofiles
+      echo "PUTVAL \"$HOSTNAME/tomcat/number_open_files\" \
+         interval=$INTERVAL N:$VALUE"
+    done
+
+
+
+
 
 
 !SLIDE

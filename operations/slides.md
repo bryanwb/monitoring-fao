@@ -136,10 +136,15 @@ Graph credit: R.I. Pienaar
 <center style="font-size:3em">
 <img src="1000px-ControlChart.png"></img>
 <br />
-Deming invented the Control Chart <br />
-100 years ago
+Deming popularized the Control Chart <br />
+hundreds of years ago
 
 </center>
+<center>Walter Shewhart invented the Control chart in the 1920s</center>
+
+!SLIDE
+# KPI's are what Matters
+
 
 
 !SLIDE
@@ -200,6 +205,15 @@ Ah, much better!
 * hitCount
 * . . . [and many more!](http://graphite.readthedocs.org/en/0.9.10/functions.html)!
 
+!SLIDE
+# Dashboard Demo
+
+<center>
+  <img src="dashboard.png"></img>
+</center>
+
+
+
 !SLIDE 
 # John Rauser - look at your data
 
@@ -229,9 +243,6 @@ Keep your logs, ideally in elasticsearch and view them with kibana
 ![chef](oc-chef-logo.png)
 
 !SLIDE
-# The Power of Ruby
-
-!SLIDE
 # Further Resources
 
 *  [Graphite Functions](http://graphite.readthedocs.org/en/0.9.10/functions.html)
@@ -246,13 +257,11 @@ by F. Dekhordi
 
 
 !SLIDE
-# Special Thanks to
+# Summary
 
-* Jason Dixon
-* Damiano Scaramuzza
-* Chris Davis
-* Pal Kristian Hamre
-* Pete Fritchman
-* Michael Leinartas
-
-
+* If you monitor any system, monitor your _Production_ system
+* The most important metrics are youre KPIs
+* SOA requires better monitoring
+* Make decisions based on data
+* What are your KPI's doing today? 
+* What are your KPI's doing right now?a
