@@ -2,6 +2,7 @@
 
 <center style="font-size:6em;">
 Monitoring data.fao.org
+<br /><br />
 </center>
 ![alt text](preso-front1.png)
 <br />
@@ -30,8 +31,8 @@ KISAF Presentation October 23, 2012, Bryan W. Berry
 * SOA is complicated
 * Monitoring Helps
 * But What does it all mean?
-* Measure it, don't just monitor it
-* Presentation matters
+* How you can start monitoring your applications
+* Show me the Math!
 
 !SLIDE full-page
 # data.fao.org Architecture on Paper 
@@ -52,7 +53,7 @@ KISAF Presentation October 23, 2012, Bryan W. Berry
 # What We use for Monitoring
 
 * Collectd (cpu, disk, network, arbitrary system data)
-* <strike>JMXtrans to poll JMX data</strike>
+* JMXtrans to poll JMX data
 * Logstash + statsd awesome combination
 * Graphite
 * Elasticsearch + Kibana
@@ -83,17 +84,9 @@ largely based on discussion in [foodfightshow episode 21](http://foodfightshow.o
         </div>
         </a>
 </center>
-    
+
 !SLIDE
-# Don't be a Phenomonologist, Be a Scientist
-    
-<center>
-<img src="phenom_or_scientist.png"></img>
-</center>
-    
-    
-!SLIDE
-# Graphite changes how you work
+# Monitoring changes how you work
 
 <center>
 <img src="deming-quality.jpeg.jpg"></img>
@@ -107,6 +100,13 @@ largely based on discussion in [foodfightshow episode 21](http://foodfightshow.o
 </center>
 <center>
 W. Edwards Deming
+</center>
+
+!SLIDE
+# Don't be a Phenomonologist, Be a Scientist
+    
+<center>
+<img src="phenom_or_scientist.png"></img>
 </center>
 
 !SLIDE

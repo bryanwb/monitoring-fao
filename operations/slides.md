@@ -143,18 +143,6 @@ hundreds of years ago
 <center>Walter Shewhart invented the Control chart in the 1920s</center>
 
 !SLIDE
-# KPI's are what Matters
-
-
-
-!SLIDE
-# Presentation matters
-
-* Maximize Data-ink Ratio
-* Maximize data density
-* Use _words_ and colors (to a lesser extent) to add context to your graph
-
-!SLIDE
 # Edward Tufte, Data Visualization Guru
 
 <center>
@@ -178,17 +166,6 @@ the difficult -- that is, the revelation of the complex"
 </center>
 
 !SLIDE
-# Maximize Data-ink Ratio
-
-Drop Unnecessary Grid lines 
-
-<center>
-<img src="no-grid-lines.png"></img>
-</center>
-
-Ah, much better!
-
-!SLIDE
 # Colors and Text can Illuminate
 
 <center>
@@ -210,6 +187,25 @@ Ah, much better!
 
 <center>
   <img src="dashboard.png"></img>
+</center>
+
+!SLIDE
+# Maximize Data-ink Ratio
+
+Drop Unnecessary Grid lines 
+
+<center>
+<img src="no-grid-lines.png"></img>
+</center>
+
+Ah, much better!
+
+
+!SLIDE
+# Colors and Text can Illuminate
+
+<center>
+<img src="db_cpu_usage.png"></img>
 </center>
 
 
@@ -255,6 +251,13 @@ by F. Dekhordi
    * [Monitoring for n00bs](http://traffic.libsyn.com/foodfight/ffs21_3.mp3)
    * [Monitoringsucks](http://traffic.libsyn.com/foodfight/ffs18_3.mp3)  
 
+!SLIDE
+# Next Steps
+
+* Start generating metrics needed for TechCDR KPI's
+* Aggregate application logs into logstash
+* Gather JMX data from all TechCDR JVMs
+* Better dashboards
 
 !SLIDE
 # Summary
@@ -264,4 +267,4 @@ by F. Dekhordi
 * SOA requires better monitoring
 * Make decisions based on data
 * What are your KPI's doing today? 
-* What are your KPI's doing right now?a
+* What are your KPI's doing right now?

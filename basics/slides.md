@@ -126,15 +126,6 @@ simplest type in StatsD and collectd
 ![jmxtrans](jmxtrans.png)
 
 !SLIDE
-# <strike>JMXTrans</strike>
-
-* Not actively maintained
-* Will roll our own JMX monitor to send poll individual JVMs and
-  forward to Graphite
-* Likely based on [jmx4r](https://github.com/jmesnil/jmx4r) (JMX for Ruby)
-* Here is the beginning [jdawg](https://github.com/bryanwb/jdawg)
-
-!SLIDE
 # Control Your Own Destiny
 
 <center>
@@ -142,9 +133,9 @@ simplest type in StatsD and collectd
 </center>
 <br />
 <center style="font-size:2em;">
-You shoud monitor your production apps<br />
+You should monitor your production apps<br />
 from the inside<br />
-Srsly
+<em>Srsly</em>
 </center>
 
 !SLIDE
@@ -176,16 +167,18 @@ Srsly
 
 * All you need is a shell script
 
-    HOSTNAME="${COLLECTD_HOSTNAME:-localhost}"
-    INTERVAL="${COLLECTD_INTERVAL:-60}"
- 
-    while sleep "$INTERVAL"; do
-      PID=$(ps -ef | grep 'tomcat' | cut -f1)
-      NOFILES=$(echo /proc/$PID/nofiles
-      echo "PUTVAL \"$HOSTNAME/tomcat/number_open_files\" \
-         interval=$INTERVAL N:$VALUE"
-    done
-
+<blockquote style="font-size:2em;"><pre>
+HOSTNAME="${COLLECTD_HOSTNAME:-localhost}"
+INTERVAL="${COLLECTD_INTERVAL:-60}"
+<br />
+while sleep "$INTERVAL"; do
+  PID=$(ps -ef | grep 'tomcat' | cut -f1)
+  NOFILES=$(cat /proc/$PID/nofiles)
+  echo "PUTVAL \"$HOSTNAME/tomcat/number_open_files\" \
+     interval=$INTERVAL N:$VALUE"
+done
+</pre>
+</blockquote>
 
 
 
